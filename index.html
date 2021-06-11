@@ -1,10 +1,39 @@
 <html>
   <head>
     <title>reCAPTCHA demo: Explicit render after an onload callback</title>
+    
+<!--           $("#datesubmit").on("click", function () {
+                        const selecteddate = $("#datetimepicker4").data().date;
+                        console.log('sending event', selecteddate);
+                        window.parent.postMessage(JSON.stringify({
+                            event_code: 'ym-client-event', data: {
+                                event: {
+                                    code: "recaptcha",
+                                    data: {
+                                        recaptcha: true
+                                    }
+                                }
+                            }
+                        }), '*'); -->
+    
+    
+    
     <script type="text/javascript">
       var verifyCallback= function (response){
         
         alert(response) 
+        
+        
+        window.parent.postMessage(JSON.stringify({
+                            event_code: 'ym-client-event', data: {
+                                event: {
+                                    code: "recaptcha",
+                                    data: {
+                                        recaptcha: true
+                                    }
+                                }
+                            }
+                        })
         return true
       }
       var onloadCallback = function() {
@@ -16,17 +45,7 @@
     </script>
     
  
-    <title>Asian Paints Jarvis Login</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="../../public/webviews/jarvis/images/icons/favicon.png"/>
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="../../public/webviews/jarvis/vendor/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="../../public/webviews/jarvis/css/util.css">
-    <link rel="stylesheet" type="text/css" href="../../public/webviews/jarvis/css/main.css">
-    <!--===============================================================================================-->
+
 
   </head>
   
