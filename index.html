@@ -2,9 +2,15 @@
   <head>
     <title>reCAPTCHA demo: Explicit render after an onload callback</title>
     <script type="text/javascript">
+      var verifyCallback= function (response){
+        alert(response)
+        
+      }
+      
       var onloadCallback = function() {
         grecaptcha.render('html_element', {
-          'sitekey' : '6LfyLhsbAAAAANozFN9HmwZlhVWmyGiiDmF7_7gC'
+          'sitekey' : '6LfyLhsbAAAAANozFN9HmwZlhVWmyGiiDmF7_7gC',
+          callback: verifyCallback,
         });
       };
     </script>
