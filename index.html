@@ -24,16 +24,16 @@
         alert(response) 
         
         
-//         window.parent.postMessage(JSON.stringify({
-//                             event_code: 'ym-client-event', data: {
-//                                 event: {
-//                                     code: "recaptcha",
-//                                     data: {
-//                                         recaptcha: true
-//                                     }
-//                                 }
-//                             }
-//                         }))
+       window.parent.postMessage(JSON.stringify({
+                            event_code: 'ym-client-event', data: {
+                                event: {
+                                    code: "recaptcha",
+                                    data: {
+                                        recaptcha: true
+                                    }
+                                }
+                            }
+                        }),'*');
         return true
       }
       var onloadCallback = function() {
